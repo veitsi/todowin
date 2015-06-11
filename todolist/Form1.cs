@@ -23,12 +23,12 @@ namespace todolist
         {
             ToDoList t = new ToDoList();
             t.addTestData();
-            string a = "1111";
             string serialized = JsonConvert.SerializeObject(t);
+            System.IO.File.WriteAllText(@"serialized.txt", serialized);
+            serialized = System.IO.File.ReadAllText(@"serialized.txt");
             log.Text = serialized;
-            string json = log.Text;
-            //a = JsonConvert.DeserializeObject<string>(json);
-            //log.Text = a;
+            t = JsonConvert.DeserializeObject<ToDoList>(serialized);
+            log.Text = t.tasks[0].text;
            
         }
 
