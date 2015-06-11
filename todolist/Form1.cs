@@ -7,11 +7,31 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json;
 
 namespace todolist
 {
     public partial class frmTodo : Form
     {
+        class tmp
+        {
+            public int a = 1;
+            public string s = "s";
+
+        }
+        public void saveJson()
+        {
+            ToDoList t = new ToDoList();
+            t.addTestData();
+            string a = "1111";
+            string serialized = JsonConvert.SerializeObject(t);
+            log.Text = serialized;
+            string json = log.Text;
+            //a = JsonConvert.DeserializeObject<string>(json);
+            //log.Text = a;
+           
+        }
+
         public frmTodo()
         {
             InitializeComponent();
@@ -25,11 +45,12 @@ namespace todolist
         private void btnSave_Click(object sender, EventArgs e)
         {
             //status.Text =""+ todo.Nodes.Count;
+            saveJson();
             Console.WriteLine("n=" + todo.Nodes.Count);
             TreeNode node;
             node = todo.Nodes[0];
-            todo.Nodes[0]
-                n
+            //todo.Nodes[0]
+        
             for (int i = 0; i < todo.Nodes.Count; i++)
             {
                 

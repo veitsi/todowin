@@ -51,6 +51,7 @@
             this.btnOpen = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.status = new System.Windows.Forms.Label();
+            this.log = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // todo
@@ -94,7 +95,7 @@
             treeNode11,
             treeNode12,
             treeNode13});
-            this.todo.Size = new System.Drawing.Size(427, 240);
+            this.todo.Size = new System.Drawing.Size(427, 191);
             this.todo.TabIndex = 0;
             this.todo.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.todo_AfterSelect);
             // 
@@ -121,18 +122,27 @@
             // status
             // 
             this.status.AutoSize = true;
-            this.status.Location = new System.Drawing.Point(128, 256);
+            this.status.Location = new System.Drawing.Point(134, 191);
             this.status.Name = "status";
             this.status.Size = new System.Drawing.Size(167, 13);
             this.status.TabIndex = 3;
             this.status.Text = "label1hfghfgh  hfghfghfgh hfghfgh";
             this.status.Click += new System.EventHandler(this.label1_Click);
             // 
+            // log
+            // 
+            this.log.Location = new System.Drawing.Point(13, 211);
+            this.log.Name = "log";
+            this.log.Size = new System.Drawing.Size(427, 55);
+            this.log.TabIndex = 4;
+            this.log.Text = "hfghfgh\ngdfgdfgdf\nfdgdfgdfgdfg\ngdfgdfg";
+            // 
             // frmTodo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(468, 333);
+            this.ClientSize = new System.Drawing.Size(448, 334);
+            this.Controls.Add(this.log);
             this.Controls.Add(this.status);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnOpen);
@@ -150,6 +160,7 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.TreeView todo;
         private System.Windows.Forms.Label status;
+        private System.Windows.Forms.RichTextBox log;
     }
 }
 
